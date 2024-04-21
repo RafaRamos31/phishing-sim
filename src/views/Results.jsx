@@ -34,6 +34,7 @@ function Results() {
       <img src={phishing} alt="logo phishing" style={{maxHeight: '100px'}}/>
       <h1 style={{marginBottom: '0'}}>Número de personas que abrieron el enlace</h1>
       <button style={{marginTop: '2rem', marginBottom: '2rem', width: '8rem', height: '6rem', fontSize: '2rem'}} onClick={() => setShow(s => !s)}>{count}</button>
+      <div style={{display: 'grid', gridTemplateColumns: 'auto auto auto auto'}}>
       {
         show && victimas.map((u, index) => (
           <p 
@@ -43,6 +44,7 @@ function Results() {
           }} key={index}>{u.nombre}</p>
         ))
       }
+      </div>
     </>
   )
 }
